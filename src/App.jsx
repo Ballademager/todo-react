@@ -9,10 +9,17 @@ function App() {
     if (localList == null) return [];
     return JSON.parse(localList);
   });
+  const [theme, setTheme] = useState("classic");
 
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(items)), [items];
   });
+
+  // useState => Theme
+  // Theme => Localstorage
+  function changeTheme() {
+    // data-theme set to value of themeSelecter
+  }
 
   function addItem(newItem) {
     setItems((oldState) => oldState.concat(newItem));
@@ -38,10 +45,10 @@ function App() {
   }
 
   return (
-    <main className="bg-slate-200 md:p-4">
-      <div className="grid md:grid-cols-3">
-        <h1 className="py-4 font-semibold text-3xl text-center col-start-2">My ToDo Lists</h1>
-        <ThemePicker />
+    <main data-theme="classic" className="md:p-4">
+      <div className="grid sm:grid-cols-3">
+        <h1 className="py-4 font-semibold text-3xl text-center sm:col-start-2">My ToDo Lists</h1>
+        <ThemePicker changeTheme={changeTheme} />
       </div>
       <div>
         <List addItem={addItem} toggleCompleted={toggleCompleted} deleteItem={deleteItem} items={items} />
