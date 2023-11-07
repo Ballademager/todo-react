@@ -32,12 +32,10 @@ function App() {
   }
 
   function deleteItem(id) {
-    console.log(id, "skal slettes");
     setItems((old) => old.filter((item) => item.id !== id));
   }
 
   function toggleCompleted(id) {
-    console.log(id, "skal toggles");
     setItems((old) => {
       return old.map((item) => {
         if (item.id === id) {
