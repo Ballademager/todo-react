@@ -3,3 +3,6 @@
   margin: 0 0;
   /* padding: 2rem; */
 }
+main {
+  min-height: 100vh;
+}

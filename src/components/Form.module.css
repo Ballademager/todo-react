@@ -1,0 +1,28 @@
+.form {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 1rem;
+  padding-inline: 2.5rem 1rem;
+  /* background-color: var(--paper-yellow); */
+
+  & input {
+    background: #fffbea;
+    border-radius: 5px;
+    padding-inline-start: 0.5rem;
+  }
+
+  & button {
+    grid-column: 2/-1;
+    justify-self: center;
+    align-self: center;
+    padding: 2px 8px;
+    margin-bottom: 2px;
+    color: white;
+    /* background-color: color-mix(in srgb, var(--paper-yellow) 80%, var(--vert-yellow) 20%); */
+    background: radial-gradient(var(--vert-pink), var(--vert-yellow));
+  }
+  @media (width < 466px) {
+    padding-inline: 2rem 0.5rem;
+    grid-template-columns: 2.5fr 1fr 1fr;
+  }
+}

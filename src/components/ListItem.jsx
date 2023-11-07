@@ -7,8 +7,8 @@ function ListItem({ task, completed, id, deleteItem, toggleCompleted }) {
   }
 
   return (
-    <li className={`${completed ? styles.completed : ""} ${styles.li}`}>
-      {task}
+    <li className={styles.li}>
+      <span className={completed ? styles.completed : ""}>{task}</span>
       <button className={styles.button} onClick={() => toggleCompleted(id)}>
         {completed ? "Undo" : "Done?"}
       </button>

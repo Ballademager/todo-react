@@ -16,6 +16,43 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --paper-yellow: #fff7d0;
+  --lines-yellow: #51d3ef;
+  --vert-yellow: #ff1b17;
+  --paper-blue: #d0fcff;
+  --lines-blue: #516aef;
+  --vert-blue: #ff1b17;
+  --paper-white: #fffdf5;
+  --lines-white: #bdc3c4;
+  --vert-white: #bdc3c4;
+  --paper-pink: #ffd8ed;
+  --lines-pink: #4e9fff;
+  --vert-pink: #ff06f5;
+}
+[data-theme="classic"] {
+  --paper-clr: var(--paper-yellow);
+  --lines-clr: var(--lines-yellow);
+  --vert-clr: var(--vert-yellow);
+  --body-bg-clr: var(--paper-white);
+}
+[data-theme="blue"] {
+  --paper-clr: var(--paper-blue);
+  --lines-clr: var(--lines-blue);
+  --vert-clr: var(--vert-blue);
+  --body-bg-clr: #d7ebff;
+}
+[data-theme="dust"] {
+  --paper-clr: var(--paper-white);
+  --lines-clr: var(--lines-white);
+  --vert-clr: var(--vert-white);
+  --body-bg-clr: #e1d0b7;
+}
+[data-theme="pink"] {
+  --paper-clr: var(--paper-pink);
+  --lines-clr: var(--lines-pink);
+  --vert-clr: var(--vert-pink);
+  --body-bg-clr: var(--paper-blue);
 }
 
 a {
@@ -29,8 +66,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -41,19 +78,17 @@ h1 {
 }
 
 button {
-  /* border-radius: 8px;
+  cursor: pointer;
   border: 1px solid transparent;
+  /* border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  cursor: pointer;
   transition: border-color 0.25s; */
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -61,7 +96,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: black;
     background-color: #ffffff;
   }
   a:hover {

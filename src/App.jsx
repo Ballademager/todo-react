@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
 import List from "./components/List";
+import ThemePicker from "./components/ThemePicker";
 
 function App() {
   const [items, setItems] = useState(() => {
@@ -38,11 +38,13 @@ function App() {
   }
 
   return (
-    <main className="bg-slate-200 border rounded-lg border-solid border-black p-4">
-      <h1 className="my-4 text-2xl ">My Todo</h1>
-      <Form addItem={addItem} />
+    <main className="bg-slate-200 md:p-4">
+      <div className="grid md:grid-cols-3">
+        <h1 className="py-4 font-semibold text-3xl text-center col-start-2">My ToDo Lists</h1>
+        <ThemePicker />
+      </div>
       <div>
-        <List toggleCompleted={toggleCompleted} deleteItem={deleteItem} items={items} />
+        <List addItem={addItem} toggleCompleted={toggleCompleted} deleteItem={deleteItem} items={items} />
       </div>
     </main>
   );
