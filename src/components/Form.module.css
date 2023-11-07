@@ -6,9 +6,10 @@
   /* background-color: var(--paper-yellow); */
 
   & input {
-    background: #fffbea;
+    background: linear-gradient(to top, transparent 4px, #fffbea 4px);
     border-radius: 5px;
     padding-inline-start: 0.5rem;
+    /* margin-bottom: 3px; */
   }
 
   & button {
@@ -16,7 +17,7 @@
     justify-self: center;
     align-self: center;
     padding: 2px 8px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     color: white;
     /* background-color: color-mix(in srgb, var(--paper-yellow) 80%, var(--vert-yellow) 20%); */
     background: radial-gradient(var(--vert-pink), var(--vert-yellow));

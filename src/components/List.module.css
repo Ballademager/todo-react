@@ -5,11 +5,11 @@
   grid-template-rows: repeat(13, 44px);
   grid-auto-rows: 44px;
   grid-template-columns: 1fr;
-  background: #fff7d0;
+  background: var(--paper-yellow);
   box-shadow: 2px 2px 3px gray;
   background-image: linear-gradient(to bottom, var(--lines-clr, #51d3ef) 1px, transparent 1px);
   background-size: 100% 44px;
-  background-position: 0 44px;
+  background-position: 0 43px;
   align-items: end;
   padding-bottom: 1rem;
 
@@ -18,7 +18,7 @@
     place-self: end center;
   }
   & li {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   @media (width < 466px) {

@@ -32,6 +32,7 @@ function List({ items, deleteItem, toggleCompleted, addItem }) {
             .map((item) => (
               <ListItem key={item.id} {...item} deleteItem={deleteItem} toggleCompleted={toggleCompleted} />
             ))}
+          <div className={styles.vertline}></div>
         </ul>
       </div>
     </div>
