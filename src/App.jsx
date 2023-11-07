@@ -9,16 +9,22 @@ function App() {
     if (localList == null) return [];
     return JSON.parse(localList);
   });
-  const [theme, setTheme] = useState("classic");
+  const [theme, setTheme] = useState(() => {
+    const localTheme = localStorage.getItem("THEME");
+    if (localTheme == null) return "classic";
+    return JSON.parse(localTheme);
+  });
 
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(items)), [items];
   });
 
-  // useState => Theme
-  // Theme => Localstorage
-  function changeTheme() {
-    // data-theme set to value of themeSelecter
+  useEffect(() => {
+    localStorage.setItem("THEME", JSON.stringify(theme)), [theme];
+  });
+
+  function changeTheme(newTheme) {
+    setTheme(newTheme);
   }
 
   function addItem(newItem) {
@@ -45,10 +51,10 @@ function App() {
   }
 
   return (
-    <main data-theme="classic" className="md:p-4">
+    <main data-theme={theme} className="md:p-4">
       <div className="grid sm:grid-cols-3">
         <h1 className="py-4 font-semibold text-3xl text-center sm:col-start-2">My ToDo Lists</h1>
-        <ThemePicker changeTheme={changeTheme} />
+        <ThemePicker theme={theme} changeTheme={changeTheme} />
       </div>
       <div>
         <List addItem={addItem} toggleCompleted={toggleCompleted} deleteItem={deleteItem} items={items} />

@@ -6,10 +6,10 @@
   /* background-color: var(--paper-yellow); */
 
   & input {
-    background: linear-gradient(to top, transparent 4px, #fffbea 4px);
+    background: color-mix(in srgb, var(--paper-clr) 30%, white 70%);
     border-radius: 5px;
     padding-inline-start: 0.5rem;
-    /* margin-bottom: 3px; */
+    margin-bottom: 3px;
   }
 
   & button {
@@ -20,7 +20,8 @@
     margin-bottom: 3px;
     color: white;
     /* background-color: color-mix(in srgb, var(--paper-yellow) 80%, var(--vert-yellow) 20%); */
-    background: radial-gradient(var(--vert-pink), var(--vert-yellow));
+    background: linear-gradient(in oklch to right, var(--vert-clr), var(--lines-clr));
+    background-repeat: no-repeat;
   }
   @media (width < 466px) {
     padding-inline: 2rem 0.5rem;

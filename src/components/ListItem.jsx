@@ -10,7 +10,7 @@ function ListItem({ task, completed, id, deleteItem, toggleCompleted }) {
     <li className={styles.li}>
       <span className={completed ? styles.completed : ""}>{task}</span>
       <button className={styles.button} onClick={() => toggleCompleted(id)}>
-        {completed ? "Undo" : "Done?"}
+        {completed ? "Undo" : "Yes?"}
       </button>
       <button className={styles.button} onClick={deleteThis}>
         Delete
