@@ -22,6 +22,7 @@ function Form(props) {
         id="task"
         name="task"
         type="text"
+        placeholder="I.e. do the laundry.."
         required
         value={task} // brug variablen
         onChange={(e) => setTask(e.target.value)} // ændrer variablen til dens value

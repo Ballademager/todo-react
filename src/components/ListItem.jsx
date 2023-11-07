@@ -7,10 +7,14 @@ function ListItem({ task, completed, id, deleteItem, toggleCompleted }) {
   }
 
   return (
-    <li className={completed ? styles.completed : ""}>
+    <li className={`${completed ? styles.completed : ""} ${styles.li}`}>
       {task}
-      <button onClick={() => toggleCompleted(id)}>{completed ? "Undo" : "Done?"}</button>
-      <button onClick={deleteThis}>Delete</button>
+      <button className={styles.button} onClick={() => toggleCompleted(id)}>
+        {completed ? "Undo" : "Done?"}
+      </button>
+      <button className={styles.button} onClick={deleteThis}>
+        Delete
+      </button>
     </li>
   );
 }

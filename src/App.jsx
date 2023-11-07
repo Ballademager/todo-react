@@ -9,6 +9,7 @@ function App() {
     if (localList == null) return [];
     return JSON.parse(localList);
   });
+
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(items)), [items];
   });
