@@ -28,5 +28,6 @@
   @media (width < 466px) {
     padding-inline: 2rem 0.5rem;
     grid-template-columns: 2.5fr 1fr 1fr;
+    gap: 0.5rem;
   }
 }
