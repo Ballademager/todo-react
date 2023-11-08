@@ -18,9 +18,11 @@
     align-self: center;
     padding: 2px 8px;
     margin-bottom: 3px;
-    color: white;
-    /* background-color: color-mix(in srgb, var(--paper-yellow) 80%, var(--vert-yellow) 20%); */
-    background: linear-gradient(in oklch to right, var(--vert-clr), var(--lines-clr));
+    color: black;
+    font-weight: 600;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* background: linear-gradient(in oklch to right, var(--vert-clr), var(--lines-clr)); */
+    background: var(--body-bg-clr);
     background-repeat: no-repeat;
   }
   @media (width < 466px) {
