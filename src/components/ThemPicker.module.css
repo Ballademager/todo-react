@@ -1,0 +1,16 @@
+.select {
+  background: var(--paper-clr);
+  font-weight: 700;
+}
+select option[value="classic"] {
+  background-color: var(--paper-yellow);
+}
+select option[value="blue"] {
+  background-color: var(--paper-blue);
+}
+select option[value="dust"] {
+  background-color: var(--paper-white);
+}
+select option[value="pink"] {
+  background-color: var(--paper-pink);
+}

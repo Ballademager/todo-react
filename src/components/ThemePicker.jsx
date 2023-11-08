@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./ThemPicker.module.css";
 
 function ThemePicker({ theme, changeTheme }) {
   function handleThemeChange(event) {
@@ -8,7 +9,7 @@ function ThemePicker({ theme, changeTheme }) {
 
   return (
     <div className="self-end lg:justify-self-start justify-self-center mb-3">
-      <select onChange={handleThemeChange} name="color" id="theme-select" value={theme}>
+      <select onChange={handleThemeChange} name="color" className={styles.select} value={theme}>
         <option value="classic">Classic</option>
         <option value="blue">Blue</option>
         <option value="dust">Dust</option>
