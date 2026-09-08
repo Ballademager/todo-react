@@ -52,6 +52,10 @@
   --body-bg-clr: var(--paper-blue);
 }
 
+#root {
+  margin: 0;
+}
+
 body {
   margin: 0;
   /* display: flex; */
