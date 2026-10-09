@@ -41,7 +41,8 @@
   .noteblock {
     position: relative;
     display: grid;
-    width: 28rem;
+    width: 42rem;
+    max-width: 100%;
     grid-auto-rows: minmax(44px, auto);
     grid-template-columns: 1fr;
     align-content: start;
