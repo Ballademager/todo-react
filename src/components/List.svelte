@@ -41,8 +41,9 @@
   .noteblock {
     position: relative;
     display: grid;
-    width: 42rem;
-    max-width: 100%;
+    width: fit-content;
+    min-width: 28rem;
+    max-width: min(42rem, 100%);
     grid-auto-rows: minmax(44px, auto);
     grid-template-columns: 1fr;
     align-content: start;
@@ -68,6 +69,7 @@
   @media (width < 466px) {
     .noteblock {
       width: 100%;
+      min-width: 0;
     }
   }
 
